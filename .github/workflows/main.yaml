@@ -1,23 +1,13 @@
-name: Linux CI
+name: Test Runner
 
 on:
-  push:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: [self-hosted, linux, dev]
+  test:
+    runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Build
+      - name: Print system info
         run: |
-          echo "Running on Linux runner"
+          echo "Runner is working"
           uname -a
-
-      - name: Test internal access
-        run: |
-          ping -c 1 10.0.0.5
-
-
-
