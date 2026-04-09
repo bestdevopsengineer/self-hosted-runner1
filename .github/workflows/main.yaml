@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Print system info
         run: |
-          echo "Runner is working"
+          echo "Runner is woring"
           uname -a
